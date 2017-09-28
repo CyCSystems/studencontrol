@@ -10,4 +10,5 @@ import com.cycsystems.studentcontrol.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Serializable>{
 
+	public abstract User findByUsername(String username);
 }
