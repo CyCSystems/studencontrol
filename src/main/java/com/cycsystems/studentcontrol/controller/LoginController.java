@@ -27,7 +27,7 @@ public class LoginController {
 	}
 	
 	@GetMapping({"/loginsuccess", "/"})
-	public String loginsuccess() {
+	public String logincheck() {
 		LOG.info("METHOD: loginsuccess()");
 		LOG.info("Returning to contacts view");
 		return "redirect:/menu";

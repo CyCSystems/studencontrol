@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head xmlns:th="http://www.thymeleaf.org">
 
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -12,16 +12,16 @@
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="#" th:href="@{/css/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="#" th:href="@{/css/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
 
     <!-- MetisMenu CSS -->
-    <link href="#" th:href="@{/css/vendor/metisMenu/metisMenu.min.css" rel="stylesheet"/>
+    <link href="#" th:href="@{/css/vendor/metisMenu/metisMenu.min.css}" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link href="#" th:href="@{/css/dist/css/sb-admin-2.css" rel="stylesheet"/>
+    <link href="#" th:href="@{/css/dist/css/sb-admin-2.css}" rel="stylesheet" />
 
     <!-- Custom Fonts -->
-    <link href="#" th:href="@{/css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="#" th:href="@{/css/vendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,7 +46,7 @@
                         	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="username" id="username" type="email" autofocus="autofocus"/>
+                                    <input class="form-control" placeholder="E-mail" name="username" id="username" type="text" autofocus="autofocus"/>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" id="password" type="password" value=""/>
@@ -58,7 +58,11 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                                <button class="btn btn-lg btn-success btn-block" type="submit">
+                                	<span  >Login</span>
+                                </button>
+                                <div th:if="${error != null}" class="alert alert-danger" role="alert">Invalid username or password</div>
+                                <div th:if="${logout != null}" class="alert alert-info" role="alert">Logout successfully!</div>
                             </fieldset>
                         </form>
                     </div>
@@ -68,16 +72,16 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script th:src="@{/vendor/bootstrap/js/bootstrap.min.js}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script th:src="@{/vendor/metisMenu/metisMenu.min.js}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script th:src="@{/dist/js/sb-admin-2.js}"></script>
 
 </body>
 
