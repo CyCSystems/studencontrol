@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/controllab?userSSL=false
+    url: jdbc:mysql://localhost:3306/studentcontrol?userSSL=false
     username: root
     password: Admin2017
   jpa:

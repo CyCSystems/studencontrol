@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head xmlns:th="http://www.thymeleaf.org">
+<head>
 
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -52,6 +52,7 @@
                                     <input class="form-control" placeholder="Password" name="password" id="password" type="password" value=""/>
                                 </div>
                                 <div th:if="${error != null}" class="alert alert-danger" role="alert">Invalid username or password</div>
+                                <div th:if="${logout != null}" class="alert alert-info" role="alert">Logout successfully!</div>
                                 <div class="checkbox">
                                     <label>
                                         <input name="remember" type="checkbox" value="Remember Me"/>Remember Me
@@ -61,8 +62,6 @@
                                 <button class="btn btn-lg btn-success btn-block" type="submit">
                                 	<span  >Login</span>
                                 </button>
-                                <div th:if="${error != null}" class="alert alert-danger" role="alert">Invalid username or password</div>
-                                <div th:if="${logout != null}" class="alert alert-info" role="alert">Logout successfully!</div>
                             </fieldset>
                         </form>
                     </div>
@@ -72,16 +71,16 @@
     </div>
 
     <!-- jQuery -->
-    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/css/vendor/jquery/jquery.min.js}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script th:src="@{/vendor/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/css/vendor/bootstrap/js/bootstrap.min.js}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script th:src="@{/vendor/metisMenu/metisMenu.min.js}"></script>
+    <script th:src="@{/css/vendor/metisMenu/metisMenu.min.js}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script th:src="@{/dist/js/sb-admin-2.js}"></script>
+    <script th:src="@{/css/dist/js/sb-admin-2.js}"></script>
 
 </body>
 
