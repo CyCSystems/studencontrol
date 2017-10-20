@@ -1,75 +1,56 @@
 /**
  * 
  */
-var editor; // use a global for the submit and return data rendering in the examples
- 
-$(document).ready(function() {
-	
-});
 
 $(document).ready(function() {
-	$('#example').DataTable({
-		responsive : true
+	$('#documents').DataTable({
+		responsive : true,
+		'createdRow': function( row, data, dataIndex ) {
+		      $(row).attr('id', dataIndex);
+		  },
+		  'columnDefs': [
+		     {
+		        'targets': 0,
+		        'createdCell':  function (td, cellData, rowData, row, col) {
+        				$(td).attr('style','display:none');
+		        }
+		     }
+		  ]
 	});
 	
-    editor = new $.fn.dataTable.Editor( {
-        ajax: "../php/staff.php",
-        table: "#example",
-        fields: [ {
-                label: "Name:",
-                name: "name"
-            }, {
-                label: "Position",
-                name: "position"
-            }, {
-                label: "Office",
-                name: "office"
-            }, {
-                label: "Age:",
-                name: "age"
-            }, {
-                label: "Start date:",
-                name: "start_date",
-                type: "datetime"
-            }, {
-                label: "Salary:",
-                name: "salary"
-            }
-        ]
-    } );
- 
-    $('#example').on( 'click', 'tbody td:not(:first-child)', function (e) {
-        editor.inline( this, {
-            submit: 'allIfChanged'
-        } );
-    } );
- 
-    $('#example').DataTable( {
-        dom: "Bfrtip",
-        ajax: "../php/staff.php",
-        columns: [
-            {
-                data: null,
-                defaultContent: '',
-                className: 'select-checkbox',
-                orderable: false
-            },
-            { data: "Name" },
-            { data: "position" },
-            { data: "office" },
-            { data: "age" },
-            { data: "start_date" },
-            { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) }
-        ],
-        order: [ 1, 'asc' ],
-        select: {
-            style:    'os',
-            selector: 'td:first-child'
-        },
-        buttons: [
-            { extend: "create", editor: editor },
-            { extend: "edit",   editor: editor },
-            { extend: "remove", editor: editor }
-        ]
-    } );
-} );
+	$("#tblModificar").click(function(){
+		alert ($(this).parent().parent().attr("id"));
+    });
+});
+
+function addStudentDocument() {
+	var documentTypeValue = $("#DocumentType").val();
+	var documentTypeText = $("#DocumentType option:selected").text();
+	var document = $("#Document").val();
+	var receptionDate = $("#ReceptionDate").val();
+
+	console.log("Valor del Tipo de Documento" + documentTypeValue);
+	console.log("Texto del tipo de documento" + documentTypeText);
+	console.log("Documento" + document);
+	console.log("Fecha de recepcion" + receptionDate);
+
+	var table = $('#documents').DataTable();
+	table.row.add(
+					[
+						documentTypeValue,
+						documentTypeText,
+						document,
+						receptionDate,
+						"<div class='col-lg-3'><button type='button' class='btn btn-warning' data-toggle='modal' onClick='alert ($(this).parent().parent().attr(\"id\"));' data-target='#editDocument'>Editar</button></div><div class='col-lg-3'><button type='button' class='btn btn-danger'>Eliminar</button></div></td>"
+					]
+				)
+			.draw(false);
+
+	$("#DocumentType").val('1');
+	$("#Document").val('');
+	$("#ReceptionDate").val(null);
+}
+
+function editStudentDocument(id){
+	
+}

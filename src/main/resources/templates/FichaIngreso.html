@@ -54,223 +54,256 @@
 <body>
 
 	<div id="wrapper">
-        <div th:include="menu"></div>
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Estudiante</h1>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">Ficha de Ingreso</div>
-                <div class="panel-body">
-                    <form class="form">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-pills">
-                            <li class="active"><a href="#Datos-Estudiante"
-                                data-toggle="tab">Datos Personales</a></li>
-                            <li><a href="#Datos-Encargado" data-toggle="tab">Datos
-                                    del Encargado</a></li>
-                            <li><a href="#Papeleria" data-toggle="tab">Papeleria</a></li>
-                        </ul>
+		<div th:include="menu"></div>
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">Estudiante</h1>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Ficha de Ingreso</div>
+				<div class="panel-body">
+					<form class="form">
+						<!-- Nav tabs -->
+						<ul class="nav nav-pills">
+							<li class="active"><a href="#Datos-Estudiante"
+								data-toggle="tab">Datos Personales</a></li>
+							<li><a href="#Datos-Encargado" data-toggle="tab">Datos
+									del Encargado</a></li>
+							<li><a href="#Papeleria" data-toggle="tab">Papeleria</a></li>
+						</ul>
 
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane fade in active" id="Datos-Estudiante">
-                                <div class="form-group">
-                                    
-                                    <div class="col-lg-2">
-                                        <label>Codigo unico:</label><input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-5"></div>
-                                    <div class="col-lg-3">
-                                        <label>Estado:</label> <select class="form-control">
-                                            <option>Masculino</option>
-                                            <option>Femenino</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2"></div>
-                                    <br /> <br /> <br /> <br />
-                                    <div class="col-lg-2">
-                                        <label>Primer Nomre:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Segundo Nombre:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Tercer Nombre:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Primer Apellido:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Segundo Apellido:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-10">
-                                        <label>Direccion:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <label>Genero:</label> <select class="form-control">
-                                            <option>Masculino</option>
-                                            <option>Femenino</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Fecha de Ingreso:</label> <input type="date"
-                                            class="form-control" />
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Fecha de Nacimiento:</label> <input type="date"
-                                            class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="form-group"></div>
-                            </div>
-                            <div class="tab-pane fade" id="Datos-Encargado">
-                                <div class="form-group">
-                                    <input type="hidden" id="CodigoEncargado"
-                                        name="CodigoEncargado" />
-                                    <div class="col-lg-3">
-                                        <label>Primer Nombre:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Segundo Nombre:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Primer Apellido:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Segundo Apellido:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <label>Direccion:</label> <input class="form-control" />
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Tipo de documento:</label> <select class="form-control">
-                                            <option>DPI</option>
-                                            <option>Pasaporte</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Numero de documento:</label> <input type="text"
-                                            class="form-control" />
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Telefono:</label> <input type="text"
-                                            class="form-control" />
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Genero:</label> <select class="form-control">
-                                            <option>Masculino</option>
-                                            <option>Femenino</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Tipo Encargado:</label> <select class="form-control">
-                                            <option>Padre</option>
-                                            <option>Tutor legal</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Fecha de Ingreso:</label> <input type="date"
-                                            class="form-control" />
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label>Fecha de Nacimiento:</label> <input type="date"
-                                            class="form-control" />
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <label>Estado:</label> <select class="form-control">
-                                            <option>Activo</option>
-                                            <option>Suspendido</option>
-                                            <option>Baja</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="Papeleria">
-                                <table id="example"
-                                    class="table table-striped table-bordered table-hover" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Tipo Documento</th>
-                                            <th>Descripcion</th>
-                                            <th>Fecha de Entrega</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <td>Diploma</td>                   
-                                        <td>Sexto Primaria</td>
-                                        <td>10/10/2017</td>
-                                        <td>
-                                            <div class="col-lg-3">
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Editar</button>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <button type="button" class="btn btn-danger">Eliminar</button>
-                                            </div>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="Datos-Estudiante">
+								<div class="form-group">
 
-                                        </td>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th >Tipo Documento</th>
-                                            <th>Descripcion</th>
-                                            <th>Fecha de Entrega</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+									<div class="col-lg-2">
+										<label>Codigo unico:</label><input class="form-control" />
+									</div>
+									<div class="col-lg-5"></div>
+									<div class="col-lg-3">
+										<label>Estado:</label> <select class="form-control" required="required">
+											<option>Masculino</option>
+											<option>Femenino</option>
+										</select>
+									</div>
+									<div class="col-lg-2"></div>
+									<br /> <br /> <br /> <br />
+									<div class="col-lg-2">
+										<label>Primer Nomre:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-2">
+										<label>Segundo Nombre:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-2">
+										<label>Tercer Nombre:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-2">
+										<label>Primer Apellido:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-2">
+										<label>Segundo Apellido:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-10">
+										<label>Direccion:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-4">
+										<label>Genero:</label> <select class="form-control">
+											<option>Masculino</option>
+											<option>Femenino</option>
+										</select>
+									</div>
+									<div class="col-lg-3">
+										<label>Fecha de Ingreso:</label> <input type="date"
+											class="form-control" />
+									</div>
+									<div class="col-lg-3">
+										<label>Fecha de Nacimiento:</label> <input type="date"
+											class="form-control" />
+									</div>
+								</div>
+								<div class="form-group"></div>
+							</div>
+							<div class="tab-pane fade" id="Datos-Encargado">
+								<div class="form-group">
+									<input type="hidden" id="CodigoEncargado"
+										name="CodigoEncargado" />
+									<div class="col-lg-3">
+										<label>Primer Nombre:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-3">
+										<label>Segundo Nombre:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-3">
+										<label>Primer Apellido:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-3">
+										<label>Segundo Apellido:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-12">
+										<label>Direccion:</label> <input class="form-control" />
+									</div>
+									<div class="col-lg-2">
+										<label>Tipo de documento:</label> <select class="form-control">
+											<option>DPI</option>
+											<option>Pasaporte</option>
+										</select>
+									</div>
+									<div class="col-lg-3">
+										<label>Numero de documento:</label> <input type="text"
+											class="form-control" />
+									</div>
+									<div class="col-lg-3">
+										<label>Telefono:</label> <input type="text"
+											class="form-control" />
+									</div>
+									<div class="col-lg-2">
+										<label>Genero:</label> <select class="form-control">
+											<option>Masculino</option>
+											<option>Femenino</option>
+										</select>
+									</div>
+									<div class="col-lg-2">
+										<label>Tipo Encargado:</label> <select class="form-control">
+											<option>Padre</option>
+											<option>Tutor legal</option>
+										</select>
+									</div>
+									<div class="col-lg-3">
+										<label>Fecha de Ingreso:</label> <input type="date"
+											class="form-control" />
+									</div>
+									<div class="col-lg-3">
+										<label>Fecha de Nacimiento:</label> <input type="date"
+											class="form-control" />
+									</div>
+									<div class="col-lg-2">
+										<label>Estado:</label> <select class="form-control">
+											<option>Activo</option>
+											<option>Suspendido</option>
+											<option>Baja</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="Papeleria">
+								<div class="row">
+									<div class="col-lg-3">
+										<button type="button" class="btn btn-success"
+											data-toggle="modal" data-target="#newDocument">Anadir</button>
+									</div>
+								</div>
+								
+								<table id="documents"
+									class="table table-striped table-bordered table-hover"
+									width="100%">
+									<thead>
+										<tr>
+											<th style="display:none;">idDocumento</th>
+											<th>Tipo Documento</th>
+											<th>Descripcion</th>
+											<th>Fecha de Entrega</th>
+											<th>Acciones</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+									</tbody>
+									<tfoot>
+										<tr>
+											<th style="display:none;">idDocumento</th>
+											<th>Tipo Documento</th>
+											<th>Descripcion</th>
+											<th>Fecha de Entrega</th>
+											<th>Acciones</th>
+										</tr>
+									</tfoot>
+								</table>
 
-                                <!-- Modal para la papeleria-->
-                                <div class="container">
-                                      
-                                      <!-- Modal -->
-                                      <div class="modal fade" id="myModal" role="dialog">
-                                        <div class="modal-dialog">
-                                        
-                                          <!-- Modal content-->
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-                                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                              <h4 class="modal-title">Datos de la papeleria</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                              <div class="form-group">
-                                                <label>Tipo de Documento:</label> <select class="form-control">
-                                                    <option>Diploma</option>
-                                                    <option>Certificado</option>
-                                                </select>
-                                                <label>Descripcion:</label> <input class="form-control" />
-                                                <label>Fecha:</label><input type="date" class="form-control"/>
-                                              </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-success" onclick="">Añadir</button>
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                            </div>
-                                          </div>
-                                          
-                                        </div>
-                                      </div>
-                                      
-                                    </div>
-                            </div>
+								<!-- Modal para modificar papeleria-->
+								<div class="container">
+									<!-- Modal -->
+									<div class="modal fade" id="editDocument" role="dialog">
+										<div class="modal-dialog">
 
-                        </div>
-                    </form>
-                    <!-- /.panel-body -->
-                </div>
-            </div>
-            <div class="panel-footer">
-                <button type="submit" class="btn btn-success">Guardar</button>
-                <button type="button" class="btn btn-info">Modificar</button>
-                <button type="button" class="btn btn-danger">Cancelar</button>
-            </div>
-        </div>
-        <!-- /.row -->
-    </div>
+											<!-- Modal content-->
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+													<h4 class="modal-title">Datos de la papeleria</h4>
+												</div>
+												<div class="modal-body">
+													<div class="form-group">
+														<label>Tipo de Documento:</label> <select
+															id="editDocumentType" class="form-control">
+															<option value="1">Diploma</option>
+															<option value="2">Certificado</option>
+														</select> 
+														<label>Descripcion:</label> <input id="editDocument" class="form-control" /> 
+														<label>Fecha:</label><input id="editReceptionDate" type="date" class="form-control" />
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button id="tblModificar" type="button" class="btn btn-success">Modificar</button>
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cancelar</button>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+
+								<!-- Modal para anadir nueva papeleria-->
+								<div class="container">
+									<!-- Modal -->
+									<div class="modal fade" id="newDocument" role="dialog">
+										<div class="modal-dialog">
+
+											<!-- Modal content-->
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+													<h4 class="modal-title">Datos de la papeleria</h4>
+												</div>
+												<div class="modal-body">
+													<div class="form-group">
+														<label>Tipo de Documento:</label> <select
+															id="DocumentType" class="form-control">
+															<option value="1">Diploma</option>
+															<option value="2">Certificado</option>
+														</select> <label>Descripcion:</label> <input id="Document"
+															class="form-control" /> <label>Fecha:</label><input
+															id="ReceptionDate" type="date" class="form-control" />
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-success"
+														onclick="addStudentDocument(1);" data-dismiss="modal">Anadir</button>
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Cancelar</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<!-- /.panel-body -->
+				</div>
+			</div>
+			<div class="panel-footer">
+				<button type="submit" class="btn btn-success">Guardar</button>
+				<button type="button" class="btn btn-info">Modificar</button>
+				<button type="button" class="btn btn-danger">Cancelar</button>
+			</div>
+		</div>
+		<!-- /.row -->
+	</div>
 
 	<!-- jQuery -->
 	<script th:src="@{/css/vendor/jquery/jquery.min.js}"></script>
